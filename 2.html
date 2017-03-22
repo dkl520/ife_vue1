@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+//			var o = (function() {
+//				var person = { name: "zhangdong", age: 24 };
+//				return {
+//					run(k) { return person[k]; }
+//				}
+//			})();
+                 function Observer(a,b){
+		     	     _name=a.name;
+		     	     _age=a.age;
+		     	 var  data={
+		     	 	 name:_name,
+		     	 	 age:_age
+		     	 	 
+		     	 };
+		     	   return {
+						run(){return data[k]}
+		     	   		     	  
+		     	   }
+		     	 }
+			//不改变以上代码，如何获得person对象
+			//
+			Object.defineProperty(Object.prototype, 'self', {
+				get: function() { return this; }
+			});
+//
+//			var person = o.run("self");
+//
+//			person.age++;
+//
+//			console.dir(person);
+//			console.log(person.name);
+//
+//			console.log(o.run("age"));
+		</script>
+	</body>
+
+</html>
